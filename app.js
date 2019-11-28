@@ -1,4 +1,4 @@
-var port = process.env.PORT || 3000,
+/*var port = process.env.PORT || 3000,
     http = require('http'),
     fs = require('fs');
 
@@ -57,4 +57,15 @@ var app = http.createServer(function (req, res) {
   }
 }).listen(port, '0.0.0.0');
 
-module.exports = app;
+module.exports = app;*/
+
+
+const MongoClient = require('mongodb').MongoClient;
+const uri = "mongodb+srv://Chris:Rambo1978@cluster0-c1ewe.mongodb.net/test?retryWrites=true&w=majority";
+const client = new MongoClient(uri, { useNewUrlParser: true });
+client.connect(err => {
+  console.log("Adding collection..");
+  const collection = client.db("test").collection("mytestcollection");
+  // perform actions on the collection object
+  client.close();
+});
