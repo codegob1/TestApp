@@ -4,8 +4,7 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "node app.js",
-    "test": "mocha --recursive tests --exit"
+    "start": "node app.js"
   },
   "dependencies": {
     "mongodb": "^3.3.5"
