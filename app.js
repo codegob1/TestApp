@@ -3,7 +3,7 @@ var port = process.env.PORT || 3000,
     http = require('http'),
     fs = require('fs');
 
-var methods = require('./../methods/auth');
+var methods = require('./../methods/method');
 
 var app = http.createServer(function (req, res) {
     
