@@ -6,6 +6,9 @@ var port = process.env.PORT || 3000,
     fs = require('fs');
 
 var app = http.createServer(function (req, res) {
+    res.writeHead(200, {'Content-Type': 'text/html'});
+    res.end('Hello World!');
+/*
   if (req.url.indexOf('/img') != -1) {
     var filePath = req.url.split('/img')[1];
     fs.readFile(__dirname + '/public/img' + filePath, function (err, data) {
@@ -58,6 +61,7 @@ var app = http.createServer(function (req, res) {
       res.end();
     });
   }
+  */
 }).listen(port, '0.0.0.0');
 
 module.exports = app;
