@@ -62,26 +62,8 @@ var app = http.createServer(function (req, res) {
 
 module.exports = app;
 
-app.get("/api/test/database-test", function (req, res) {
+/*app.get("/api/test/database-test", function (req, res) {
     
     console.log("calling database-test..");
     return res.status(200).json({a: "arse"});
-});
-
-        /*
- const client = new MongoClient(uri, { useNewUrlParser: true });
-    client.connect(err => 
-    {
-        console.log("Adding collection..");
-        const collection = client.db("test").collection("mytestcollection");
-    
-        res.json({"username":user_name, "does he exist?":checking});
-    
-        // perform actions on the collection object
-        client.close();
-    });
-    
-  res.json({"username":user_name, "does he exist?":checking});
-});
-
-*/
+});*/
