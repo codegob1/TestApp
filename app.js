@@ -62,11 +62,11 @@ var app = http.createServer(function (req, res) {
 
 module.exports = app;
 
-/*app.post("/api/test/database-test", function (req, res) {
+app.get("/api/test/database-test", function (req, res) {
     
     console.log("calling database-test..");
     return res.status(200).json({a: "arse"});
-});*/
+});
 
         /*
  const client = new MongoClient(uri, { useNewUrlParser: true });
