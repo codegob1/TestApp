@@ -1,5 +1,5 @@
-const MongoClient = require('mongodb').MongoClient;
-const uri = "mongodb+srv://Chris:Rambo1978@cluster0-c1ewe.mongodb.net/test?retryWrites=true&w=majority";
+var MongoClient = require('mongodb').MongoClient;
+var uri = "mongodb+srv://Chris:Rambo1978@cluster0-c1ewe.mongodb.net/test?retryWrites=true&w=majority";
 
 var port = process.env.PORT || 3000,
     http = require('http'),
