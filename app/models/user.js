@@ -16,12 +16,4 @@ var UserSchema = new Schema({
 	}
 });
 
-// Bcrypt middleware on UserSchema
-UserSchema.pre('save', function(next) {
-    console.log("UserSchema.pre('save', function(next)");
-    return next();
-});
-
-
-
 module.exports = mongoose.model('user', UserSchema);

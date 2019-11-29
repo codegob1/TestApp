@@ -5,9 +5,16 @@ var methods = {
        
 	createNewUser : function(username) {
         console.log("creating new user...");
-		var account = new User();
-		account.username = username;
-		return account.saveAsync();
+		var newUser = new User();
+		newUser.username = username;
+        newUser.saveAsync()
+        .then(function(savedUser) {
+            console.log(" saving..." + JSON.stringify(savedUser));
+            return savedUser;
+        })
+        .catch(function(err) {
+            console.log("There was an error saving the new user");
+        })
 	},
   
 };
