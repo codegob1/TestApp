@@ -34,5 +34,12 @@ client.on('connect', function() {
     console.log('connected to REDIS');
 });
 
-module.exports.mongo = mongoose.connect( process.env.MONGODB_URI );
+//module.exports.mongo = mongoose.connect( process.env.MONGODB_URI );
+module.exports.mongo = mongoose.connect('mongodb+srv://Chris:Rambo1978@cluster0-c1ewe.mongodb.net/test?retryWrites=true&w=majority', {
+    useNewUrlParser: true,
+    useCreateIndex: true,
+    useFindAndModify: false
+})
+
+//module.exports.mongo = mongoose.connect( process.env.MONGODB_URI );
 module.exports.redis = client; 
