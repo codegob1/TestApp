@@ -7,7 +7,7 @@ var methods = {
         console.log("creating new user...");
 		var newUser = new User();
 		newUser.username = username;
-        newUser.saveAsync()
+        newUser.save();
         .then(function(savedUser) {
             console.log(" saving..." + JSON.stringify(savedUser));
             return savedUser;
