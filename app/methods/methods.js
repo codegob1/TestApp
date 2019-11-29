@@ -8,13 +8,8 @@ var methods = {
 		var newUser = new User();
 		newUser.username = username;
         newUser.save();
-        .then(function(savedUser) {
-            console.log(" saving..." + JSON.stringify(savedUser));
-            return savedUser;
-        })
-        .catch(function(err) {
-            console.log("There was an error saving the new user");
-        })
+        console.log(" saving..." + JSON.stringify(newUser));
+        return newUser;
 	},
   
 };
